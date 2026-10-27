@@ -6,6 +6,7 @@ import json
 import os
 from pathlib import Path
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -96,6 +97,9 @@ class DistributionTests(unittest.TestCase):
         plugin = json.loads((package / ".claude-plugin/plugin.json").read_text())
         self.assertEqual(entry["name"], plugin["name"])
         self.assertEqual(market["metadata"]["version"], plugin["version"])
+        for platform in ("codex", "claude"):
+            self.assertEqual(load(ROOT / "packages" / platform / "install.py").VERSION,
+                             plugin["version"])
 
 
 class InstallerBehavior:
@@ -219,6 +223,58 @@ class InstallerBehavior:
             self.assertNotIn("${CLAUDE_PLUGIN_ROOT}", text)
             for rel in re.findall(r"~/([\w./-]+)", text):
                 self.assertTrue((self.home / rel).exists(), (path, rel))
+
+    def old_payload(self):
+        """模拟已受管旧版：没有新增资源，现有技能还是旧正文。"""
+        desired = self.module.payload()
+        new_names = {"product-methods.md", "product-graph.md", "product_graph.py",
+                     "product-graph.json", "product-experiment.md", "product-decision.md"}
+        old = {name: data for name, data in desired.items() if Path(name).name not in new_names}
+        old[f"{self.skillroot}/product-design/SKILL.md"] = b"previous managed skill version\n"
+        return old
+
+    def test_upgrade_old_managed_payload_adds_graph_and_preserves_backup(self):
+        old = self.old_payload()
+        with patch.object(self.module, "payload", return_value=old), patch.object(self.module, "VERSION", "1.0.0"):
+            self.run_installer()
+        self.assertFalse((self.home / self.skillroot / "product-shared/product_graph.py").exists())
+        self.run_installer()
+        self.run_installer("check")
+        current = json.loads(self.state.read_text())
+        self.assertEqual(current["version"], self.module.VERSION)
+        self.assertEqual(self.sample.read_bytes(), self.module.payload()[f"{self.skillroot}/product-design/SKILL.md"])
+        self.assertTrue((self.home / self.skillroot / "product-shared/product_graph.py").exists())
+        backups = list((self.home / self.config / "product-expert-team/backups").rglob("SKILL.md"))
+        self.assertTrue(any(p.read_bytes() == b"previous managed skill version\n" for p in backups))
+
+    def test_upgrade_rejects_modified_old_file_before_any_new_write(self):
+        old = self.old_payload()
+        with patch.object(self.module, "payload", return_value=old):
+            self.run_installer()
+        self.sample.write_text("user customization", encoding="utf-8")
+        before = self.state.read_bytes()
+        with self.assertRaises(ValueError):
+            self.run_installer()
+        self.assertEqual(self.state.read_bytes(), before)
+        self.assertEqual(self.sample.read_text(), "user customization")
+        self.assertFalse((self.home / self.skillroot / "product-shared/product_graph.py").exists())
+
+    def test_missing_graph_resource_refuses_distribution(self):
+        package = self.home / "source package"
+        shutil.copytree(self.module.PACKAGE, package, ignore=shutil.ignore_patterns("__pycache__"))
+        (package / "skills/product-shared/templates/product-graph.json").unlink()
+        with patch.object(self.module, "PACKAGE", package):
+            with self.assertRaises(ValueError):
+                self.run_installer()
+        self.assertFalse(self.state.exists())
+
+    def test_installed_graph_cli_uses_own_package(self):
+        self.run_installer()
+        shared = self.home / self.skillroot / "product-shared"
+        result = subprocess.run([sys.executable, str(shared / "product_graph.py"), "validate",
+                                 str(shared / "templates/product-graph.json")],
+                                capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
 
 class CodexInstallTests(InstallerBehavior, unittest.TestCase):

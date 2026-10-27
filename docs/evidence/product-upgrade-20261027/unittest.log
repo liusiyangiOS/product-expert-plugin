@@ -1,0 +1,187 @@
+test_argument_errors_use_one_instead_of_unverified_code (test_product_graph.CliTests.test_argument_errors_use_one_instead_of_unverified_code) ... ok
+test_cli_validation_impact_ready_and_no_mutation (test_product_graph.CliTests.test_cli_validation_impact_ready_and_no_mutation) ... ok
+test_exit_codes_distinguish_invalid_and_unverified (test_product_graph.CliTests.test_exit_codes_distinguish_invalid_and_unverified) ... ok
+test_help_describes_exit_codes_and_readonly (test_product_graph.CliTests.test_help_describes_exit_codes_and_readonly) ... ok
+test_malformed_json_and_unknown_node_fail_without_traceback (test_product_graph.CliTests.test_malformed_json_and_unknown_node_fail_without_traceback) ... ok
+test_binary_content_hashed_without_printing_and_input_unchanged (test_product_graph.FileCheckTests.test_binary_content_hashed_without_printing_and_input_unchanged) ... ok
+test_credentials_paths_rejected_before_read (test_product_graph.FileCheckTests.test_credentials_paths_rejected_before_read) ... ok
+test_hardlink_alias_and_directory_are_rejected (test_product_graph.FileCheckTests.test_hardlink_alias_and_directory_are_rejected) ... ok
+test_hash_changed_missing_and_affected_multihop_nodes (test_product_graph.FileCheckTests.test_hash_changed_missing_and_affected_multihop_nodes) ... ok
+test_remote_unverified_without_network_and_empty_sources_not_fresh (test_product_graph.FileCheckTests.test_remote_unverified_without_network_and_empty_sources_not_fresh) ... ok
+test_root_itself_cannot_bypass_credentials_path_filter (test_product_graph.FileCheckTests.test_root_itself_cannot_bypass_credentials_path_filter) ... ok
+test_source_on_edge_invalidates_its_downstream_in_impact_direction (test_product_graph.FileCheckTests.test_source_on_edge_invalidates_its_downstream_in_impact_direction) ... ok
+test_symlink_file_and_parent_directory_escape_rejected (test_product_graph.FileCheckTests.test_symlink_file_and_parent_directory_escape_rejected) ... ok
+test_traversal_absolute_and_windows_paths_are_rejected (test_product_graph.FileCheckTests.test_traversal_absolute_and_windows_paths_are_rejected) ... ok
+test_blocked_running_and_pending_dependencies_never_unlock_followups (test_product_graph.PropagationTests.test_blocked_running_and_pending_dependencies_never_unlock_followups) ... ok
+test_multihop_and_reversed_depends_on_explain_each_trigger (test_product_graph.PropagationTests.test_multihop_and_reversed_depends_on_explain_each_trigger) ... ok
+test_completion_and_skip_gates (test_product_graph.SchemaTests.test_completion_and_skip_gates) ... ok
+test_dangling_node_source_and_task_references (test_product_graph.SchemaTests.test_dangling_node_source_and_task_references) ... ok
+test_duplicate_identifiers_in_each_namespace (test_product_graph.SchemaTests.test_duplicate_identifiers_in_each_namespace) ... ok
+test_long_task_dag_does_not_recurse (test_product_graph.SchemaTests.test_long_task_dag_does_not_recurse) ... ok
+test_observed_requires_known_evidence_and_inferred_remains_inferred (test_product_graph.SchemaTests.test_observed_requires_known_evidence_and_inferred_remains_inferred) ... ok
+test_product_cycle_allowed_task_cycle_rejected (test_product_graph.SchemaTests.test_product_cycle_allowed_task_cycle_rejected) ... ok
+test_template_is_valid_and_explicitly_synthetic (test_product_graph.SchemaTests.test_template_is_valid_and_explicitly_synthetic) ... ok
+test_types_versions_and_malformed_structures (test_product_graph.SchemaTests.test_types_versions_and_malformed_structures) ... ok
+test_acceptance_requires_receiver_evidence (test_product_plugin.BridgeTests.test_acceptance_requires_receiver_evidence) ... ok
+test_blocked_request_needs_reason (test_product_plugin.BridgeTests.test_blocked_request_needs_reason) ... ok
+test_dispatch_receipt_must_match_request_revision (test_product_plugin.BridgeTests.test_dispatch_receipt_must_match_request_revision) ... ok
+test_feasibility_can_receive_the_blocker_it_needs_to_investigate (test_product_plugin.BridgeTests.test_feasibility_can_receive_the_blocker_it_needs_to_investigate) ... ok
+test_implement_ready_and_authorization_boundary (test_product_plugin.BridgeTests.test_implement_ready_and_authorization_boundary) ... ok
+test_missing_acceptance_and_blocking_questions (test_product_plugin.BridgeTests.test_missing_acceptance_and_blocking_questions) ... ok
+test_reject_malformed_types_without_crashing (test_product_plugin.BridgeTests.test_reject_malformed_types_without_crashing) ... ok
+test_reverse_consultation_needs_no_implementation_authorization (test_product_plugin.BridgeTests.test_reverse_consultation_needs_no_implementation_authorization) ... ok
+test_template_is_only_draft (test_product_plugin.BridgeTests.test_template_is_only_draft) ... ok
+test_conflicts_preflight_and_replace_backs_up (test_product_plugin.ClaudeInstallTests.test_conflicts_preflight_and_replace_backs_up) ... ok
+test_failed_write_rolls_back (test_product_plugin.ClaudeInstallTests.test_failed_write_rolls_back) ... ok
+test_foreign_and_traversal_manifests_rejected (test_product_plugin.ClaudeInstallTests.test_foreign_and_traversal_manifests_rejected) ... ok
+test_installed_graph_cli_uses_own_package (test_product_plugin.ClaudeInstallTests.test_installed_graph_cli_uses_own_package) ... ok
+test_lifecycle_preserves_dev_and_user_files (test_product_plugin.ClaudeInstallTests.test_lifecycle_preserves_dev_and_user_files) ... ok
+test_missing_graph_resource_refuses_distribution (test_product_plugin.ClaudeInstallTests.test_missing_graph_resource_refuses_distribution) ... ok
+test_personal_resources_resolve (test_product_plugin.ClaudeInstallTests.test_personal_resources_resolve) ... ok
+test_symlink_and_hardlink_targets_rejected (test_product_plugin.ClaudeInstallTests.test_symlink_and_hardlink_targets_rejected) ... ok
+test_upgrade_old_managed_payload_adds_graph_and_preserves_backup (test_product_plugin.ClaudeInstallTests.test_upgrade_old_managed_payload_adds_graph_and_preserves_backup) ... ok
+test_upgrade_rejects_modified_old_file_before_any_new_write (test_product_plugin.ClaudeInstallTests.test_upgrade_rejects_modified_old_file_before_any_new_write) ... ok
+test_conflicts_preflight_and_replace_backs_up (test_product_plugin.CodexInstallTests.test_conflicts_preflight_and_replace_backs_up) ... ok
+test_failed_write_rolls_back (test_product_plugin.CodexInstallTests.test_failed_write_rolls_back) ... ok
+test_foreign_and_traversal_manifests_rejected (test_product_plugin.CodexInstallTests.test_foreign_and_traversal_manifests_rejected) ... ok
+test_installed_graph_cli_uses_own_package (test_product_plugin.CodexInstallTests.test_installed_graph_cli_uses_own_package) ... ok
+test_lifecycle_preserves_dev_and_user_files (test_product_plugin.CodexInstallTests.test_lifecycle_preserves_dev_and_user_files) ... ok
+test_missing_graph_resource_refuses_distribution (test_product_plugin.CodexInstallTests.test_missing_graph_resource_refuses_distribution) ... ok
+test_personal_resources_resolve (test_product_plugin.CodexInstallTests.test_personal_resources_resolve) ... ok
+test_symlink_and_hardlink_targets_rejected (test_product_plugin.CodexInstallTests.test_symlink_and_hardlink_targets_rejected) ... ok
+test_upgrade_old_managed_payload_adds_graph_and_preserves_backup (test_product_plugin.CodexInstallTests.test_upgrade_old_managed_payload_adds_graph_and_preserves_backup) ... ok
+test_upgrade_rejects_modified_old_file_before_any_new_write (test_product_plugin.CodexInstallTests.test_upgrade_rejects_modified_old_file_before_any_new_write) ... ok
+test_exact_names_and_native_role_metadata (test_product_plugin.DistributionTests.test_exact_names_and_native_role_metadata) ... ok
+test_generated_claude_matches_source (test_product_plugin.DistributionTests.test_generated_claude_matches_source) ... ok
+test_local_references_resolve_inside_each_package (test_product_plugin.DistributionTests.test_local_references_resolve_inside_each_package) ... ok
+test_marketplace_targets_claude_with_same_version (test_product_plugin.DistributionTests.test_marketplace_targets_claude_with_same_version) ... ok
+test_packages_are_independent_normal_files (test_product_plugin.DistributionTests.test_packages_are_independent_normal_files) ... ok
+
+----------------------------------------------------------------------
+Ran 58 tests in 1.676s
+
+OK
+install: /private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install kb1_00de，将变更 31 个文件；不修改 settings.json 或 CLAUDE.md。
+原文件备份：/private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install kb1_00de/.claude/product-expert-team/backups/20261027T123913830855Z
+完成。请新开 Claude 会话；其他专家团、配置和项目记录保持原样。
+install: /private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install 6gmhlkvf，将变更 31 个文件；不修改 settings.json 或 CLAUDE.md。
+install: /private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install lynm9a2z，将变更 31 个文件；不修改 settings.json 或 CLAUDE.md。
+完成。请新开 Claude 会话；其他专家团、配置和项目记录保持原样。
+install: /private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install 9x1j2zos，将变更 31 个文件；不修改 settings.json 或 CLAUDE.md。
+完成。请新开 Claude 会话；其他专家团、配置和项目记录保持原样。
+install: /private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install 71eup8cj，将变更 31 个文件；不修改 settings.json 或 CLAUDE.md。
+.claude/agents/product-manager.md
+.claude/agents/product-researcher.md
+.claude/agents/product-reviewer.md
+.claude/agents/product-strategist.md
+.claude/agents/product-team-lead.md
+.claude/agents/product-tech-analyst.md
+.claude/agents/product-ui-designer.md
+.claude/agents/product-ux-designer.md
+.claude/skills/product-design/SKILL.md
+.claude/skills/product-dev-bridge/SKILL.md
+.claude/skills/product-discovery/SKILL.md
+.claude/skills/product-expert-team/SKILL.md
+.claude/skills/product-project-audit/SKILL.md
+.claude/skills/product-shared/product-design-platforms.md
+.claude/skills/product-shared/product-dev-contract.md
+.claude/skills/product-shared/product-graph.md
+.claude/skills/product-shared/product-methods.md
+.claude/skills/product-shared/product-research.md
+.claude/skills/product-shared/product-runtime.md
+.claude/skills/product-shared/product-workflow-contract.md
+.claude/skills/product-shared/product_bridge.py
+.claude/skills/product-shared/product_graph.py
+.claude/skills/product-shared/templates/product-brief.md
+.claude/skills/product-shared/templates/product-decision.md
+.claude/skills/product-shared/templates/product-design-delivery.md
+.claude/skills/product-shared/templates/product-experiment.md
+.claude/skills/product-shared/templates/product-graph.json
+.claude/skills/product-shared/templates/product-handoff.json
+.claude/skills/product-shared/templates/product-requirement.md
+.claude/skills/product-shared/templates/product-validation.md
+.claude/skills/product-validation/SKILL.md
+install: /private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install 71eup8cj，将变更 31 个文件；不修改 settings.json 或 CLAUDE.md。
+完成。请新开 Claude 会话；其他专家团、配置和项目记录保持原样。
+安装完整：8 个角色、6 个技能，31 个普通文件。
+install: /private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install 71eup8cj，将变更 0 个文件；不修改 settings.json 或 CLAUDE.md。
+原文件备份：/private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install 71eup8cj/.claude/product-expert-team/backups/20261027T123913992850Z
+完成。请新开 Claude 会话；其他专家团、配置和项目记录保持原样。
+uninstall: /private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install 71eup8cj，将变更 31 个文件；不修改 settings.json 或 CLAUDE.md。
+原文件备份：/private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install 71eup8cj/.claude/product-expert-team/backups/20261027T123913999246Z
+完成。请新开 Claude 会话；其他专家团、配置和项目记录保持原样。
+install: /private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install ei_vkl7s，将变更 31 个文件；不修改 settings.json 或 CLAUDE.md。
+完成。请新开 Claude 会话；其他专家团、配置和项目记录保持原样。
+install: /private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install r3p_lfpi，将变更 25 个文件；不修改 settings.json 或 CLAUDE.md。
+完成。请新开 Claude 会话；其他专家团、配置和项目记录保持原样。
+install: /private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install r3p_lfpi，将变更 7 个文件；不修改 settings.json 或 CLAUDE.md。
+原文件备份：/private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install r3p_lfpi/.claude/product-expert-team/backups/20261027T123914122285Z
+完成。请新开 Claude 会话；其他专家团、配置和项目记录保持原样。
+安装完整：8 个角色、6 个技能，31 个普通文件。
+install: /private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install c_9ma8g0，将变更 25 个文件；不修改 settings.json 或 CLAUDE.md。
+完成。请新开 Claude 会话；其他专家团、配置和项目记录保持原样。
+install: /private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install etlr0a49，将变更 37 个文件；不修改 config.toml 或 AGENTS.md。
+原文件备份：/private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install etlr0a49/.codex/product-expert-team/backups/20261027T123914200249Z
+完成。请新开 Codex 会话；其他专家团、配置和项目记录保持原样。
+install: /private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install vz5ba_ji，将变更 37 个文件；不修改 config.toml 或 AGENTS.md。
+install: /private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install 77np4fz8，将变更 37 个文件；不修改 config.toml 或 AGENTS.md。
+完成。请新开 Codex 会话；其他专家团、配置和项目记录保持原样。
+install: /private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install 6rqwl82g，将变更 37 个文件；不修改 config.toml 或 AGENTS.md。
+完成。请新开 Codex 会话；其他专家团、配置和项目记录保持原样。
+install: /private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install 6lcfwnrp，将变更 37 个文件；不修改 config.toml 或 AGENTS.md。
+.agents/skills/product-design/SKILL.md
+.agents/skills/product-design/agents/openai.yaml
+.agents/skills/product-dev-bridge/SKILL.md
+.agents/skills/product-dev-bridge/agents/openai.yaml
+.agents/skills/product-discovery/SKILL.md
+.agents/skills/product-discovery/agents/openai.yaml
+.agents/skills/product-expert-team/SKILL.md
+.agents/skills/product-expert-team/agents/openai.yaml
+.agents/skills/product-project-audit/SKILL.md
+.agents/skills/product-project-audit/agents/openai.yaml
+.agents/skills/product-shared/product-design-platforms.md
+.agents/skills/product-shared/product-dev-contract.md
+.agents/skills/product-shared/product-graph.md
+.agents/skills/product-shared/product-methods.md
+.agents/skills/product-shared/product-research.md
+.agents/skills/product-shared/product-runtime.md
+.agents/skills/product-shared/product-workflow-contract.md
+.agents/skills/product-shared/product_bridge.py
+.agents/skills/product-shared/product_graph.py
+.agents/skills/product-shared/templates/product-brief.md
+.agents/skills/product-shared/templates/product-decision.md
+.agents/skills/product-shared/templates/product-design-delivery.md
+.agents/skills/product-shared/templates/product-experiment.md
+.agents/skills/product-shared/templates/product-graph.json
+.agents/skills/product-shared/templates/product-handoff.json
+.agents/skills/product-shared/templates/product-requirement.md
+.agents/skills/product-shared/templates/product-validation.md
+.agents/skills/product-validation/SKILL.md
+.agents/skills/product-validation/agents/openai.yaml
+.codex/agents/product-manager.toml
+.codex/agents/product-researcher.toml
+.codex/agents/product-reviewer.toml
+.codex/agents/product-strategist.toml
+.codex/agents/product-team-lead.toml
+.codex/agents/product-tech-analyst.toml
+.codex/agents/product-ui-designer.toml
+.codex/agents/product-ux-designer.toml
+install: /private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install 6lcfwnrp，将变更 37 个文件；不修改 config.toml 或 AGENTS.md。
+完成。请新开 Codex 会话；其他专家团、配置和项目记录保持原样。
+安装完整：8 个角色、6 个技能，37 个普通文件。
+install: /private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install 6lcfwnrp，将变更 0 个文件；不修改 config.toml 或 AGENTS.md。
+原文件备份：/private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install 6lcfwnrp/.codex/product-expert-team/backups/20261027T123914396142Z
+完成。请新开 Codex 会话；其他专家团、配置和项目记录保持原样。
+uninstall: /private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install 6lcfwnrp，将变更 37 个文件；不修改 config.toml 或 AGENTS.md。
+原文件备份：/private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install 6lcfwnrp/.codex/product-expert-team/backups/20261027T123914402270Z
+完成。请新开 Codex 会话；其他专家团、配置和项目记录保持原样。
+install: /private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install qvw199ud，将变更 37 个文件；不修改 config.toml 或 AGENTS.md。
+完成。请新开 Codex 会话；其他专家团、配置和项目记录保持原样。
+install: /private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install szpdbyif，将变更 31 个文件；不修改 config.toml 或 AGENTS.md。
+完成。请新开 Codex 会话；其他专家团、配置和项目记录保持原样。
+install: /private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install szpdbyif，将变更 7 个文件；不修改 config.toml 或 AGENTS.md。
+原文件备份：/private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install szpdbyif/.codex/product-expert-team/backups/20261027T123914580657Z
+完成。请新开 Codex 会话；其他专家团、配置和项目记录保持原样。
+安装完整：8 个角色、6 个技能，37 个普通文件。
+install: /private/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/产品插件 install 0mk3uh9i，将变更 31 个文件；不修改 config.toml 或 AGENTS.md。
+完成。请新开 Codex 会话；其他专家团、配置和项目记录保持原样。

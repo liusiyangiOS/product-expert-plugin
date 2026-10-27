@@ -4,7 +4,9 @@
 
 采用 **`product-` 前缀**。产品战略、用户研究、需求、体验与 UI 都属于产品工作；无需拆成 `idea-`、`design-` 等容易分散的多套命名。每端包含 **8 个专家、6 个工作流、`product-shared`**。安装清单和备份也独立于开发专家团，不占用 `dev-*` 或 `dev-shared`。
 
-提供独立 Codex 包及 Claude 插件/个人安装包。当前是本地 1.0.0，未发布到远端，也不会因创建本目录就自动安装到个人环境。实际验证范围见 [验证报告](docs/product-validation-report.md)。
+本仓库后续修改直接在 `master` 进行，不新建工作分支；具体协作约定见 [AGENTS.md](AGENTS.md)。
+
+提供独立 Codex 包及 Claude 插件/个人安装包。当前为本地 1.1.0 升级，新增按需产品方法与 Graph，仍保留 8 个专家和 6 个入口。新版是否安装与实际验证范围见 [升级验收](docs/product-graph-upgrade-validation.md)；[1.0.0 初始验证](docs/product-validation-report.md) 作为历史记录。
 
 ## 四个核心能力
 
@@ -36,6 +38,25 @@
 | `product-validation` | 假设验证、需求就绪、设计和产品验收 |
 
 简单讨论不要求八人同时出场。产品与开发切换时保留一个调度者，避免产品团内部再套一层开发团；独立评审需要真实独立执行面，单 Agent 自查会明确标记。
+
+## 1.1.0：借鉴的产品方法与 Graph
+
+参考四个公开项目的一手工作流，补强机会/方案分层、关键假设排序、实验和指标定义、证据驱动的优先级、按风险检查需求就绪。来源、查询时的Star数、已有能力和取舍见 [比较报告](docs/product-reference-comparison-20261027.md)。Star只反映关注度；没有运行外部框架，也不把流行度当有效性证明。
+
+Graph分为三层：
+
+- **产品知识图**：证据/反证→机会与假设→方案/决定→需求→设计/代码→验收/指标，关联来源与版本。
+- **任务依赖图**：任务前置条件、owner、写入范围、验收和状态；校验环路，找出依赖就绪任务。
+- **代码关系图**：按需复用项目已有Graphify/AST/LSP索引，核对新鲜度后回到源码；不强制安装Graphify。
+
+产品图的 `product_graph.py` 提供4个实际可执行的只读命令：`validate`（结构/悬空引用/任务环）、`impact`（多跳影响及推断依据）、`ready`（依赖就绪，含阻断传播）、`check-files`（本地来源哈希与失效范围）。它不执行任务，不自动提取产品事实，不把远端资料标成已验证，也不把假设变成市场证据。
+
+```bash
+python3 packages/codex/skills/product-shared/product_graph.py validate packages/codex/skills/product-shared/templates/product-graph.json
+python3 packages/codex/skills/product-shared/product_graph.py ready packages/codex/skills/product-shared/templates/product-graph.json
+```
+
+模板是合成示例，真实任务须替换来源与内容。详细数据格式、命令、影响方向和Graphify回退规则见 [Graph协议](packages/codex/skills/product-shared/product-graph.md)。简单讨论无需建图；复杂或跨阶段任务才持久化。产品与开发仍沿用已有桥接，本版没有新增开发侧自动回调或跨聊天通信。
 
 ## 安装
 
@@ -156,4 +177,4 @@ python3 tests/product_host_smoke.py --platform both --codex-wire
 
 本包默认继承宿主模型，用户显式覆盖优先，不硬编码型号或复用开发团模型缓存。安装/宿主发现通过不代表已做过真实产品、平台设计写入或跨团开发端到端验收。
 
-安装器与隔离宿主测试参考同目录开发专家团，其余产品职责和协议为本包新增；详见 [设计决策](docs/product-design-decisions.md)。当前未替维护者选择开源许可证，正式对外发布前由维护者确定授权方式。
+安装器与隔离宿主测试参考同目录开发专家团，其余产品职责和协议为本包新增；详见 [设计决策](docs/product-design-decisions.md)。本仓库现有许可证见 [LICENSE](LICENSE)；外部参考仅归纳机制并自行实现，来源及许可核验见比较报告。

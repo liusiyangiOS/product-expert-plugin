@@ -1,0 +1,55 @@
+{
+  "start": "evidence",
+  "nodes": [
+    "evidence",
+    "hyp",
+    "req",
+    "design",
+    "accept"
+  ],
+  "triggers": [
+    {
+      "edge_index": 0,
+      "from": "evidence",
+      "to": "hyp",
+      "relation": "supports",
+      "basis": "observed",
+      "sources": [
+        "local"
+      ],
+      "propagation_from": "evidence",
+      "propagation_to": "hyp"
+    },
+    {
+      "edge_index": 2,
+      "from": "hyp",
+      "to": "req",
+      "relation": "motivates",
+      "basis": "hypothesis",
+      "sources": [],
+      "propagation_from": "hyp",
+      "propagation_to": "req"
+    },
+    {
+      "edge_index": 3,
+      "from": "req",
+      "to": "design",
+      "relation": "realized_by",
+      "basis": "inferred",
+      "sources": [],
+      "propagation_from": "req",
+      "propagation_to": "design"
+    },
+    {
+      "edge_index": 4,
+      "from": "design",
+      "to": "accept",
+      "relation": "verified_by",
+      "basis": "inferred",
+      "sources": [],
+      "propagation_from": "design",
+      "propagation_to": "accept"
+    }
+  ],
+  "note": "影响是待核验的传播线索；inferred/hypothesis 关系不构成已观察事实。"
+}

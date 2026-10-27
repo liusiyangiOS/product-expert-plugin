@@ -14,3 +14,7 @@ product-ux-designer 先定义核心路径、信息结构和必要状态；已有
 至少覆盖核心任务涉及的页面、可见状态与关键交互，并附设计 tokens、组件规则、资源、开发标注、需求映射及预览证据。按实际产物声明 ARTIFACT_KIND 与可编辑程度，不承诺一键无损跨平台。
 
 product-reviewer 对固定产物检查需求一致性、视觉层级、可访问性和完整性；如果没有渲染能力如实记录 not_run。交接使用 [设计清单](../product-shared/templates/product-design-delivery.md)，需要开发时送 product-dev-bridge。
+
+## 设计变更追踪
+
+已有产品图或跨页面需求时，按 [Graph 协议](../product-shared/product-graph.md) 保留需求→页面/组件→验收关系及真实平台版本。设计改动先核对受影响的需求与状态，由主理人合并增量；本地文件哈希不能代替远端平台回读。小型设计保持轻量，不为图强制扩大交付。

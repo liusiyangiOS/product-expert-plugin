@@ -1,4 +1,4 @@
-# 产品专家团验证报告
+# 产品专家团 1.0.0 初始验证报告
 
 日期：2026-10-27（Asia/Taipei）。范围：本地 1.0.0 源码；macOS、Python 3.14.6、Claude Code 2.1.201、Codex CLI 0.164.0-alpha.11.1。
 
@@ -59,4 +59,4 @@ python3 tests/product_host_smoke.py --platform claude
 python3 tests/product_host_smoke.py --platform codex --codex-wire
 ```
 
-真实宿主检查需要已安装对应 CLI；角色 schema 检查需要允许本机回环监听。缺少能力时记录 not_run/环境限制，不称插件通过端到端验收。运行文件快照见 [product-source-sha256.json](evidence/product-source-sha256.json)。
+真实宿主检查需要已安装对应 CLI；角色 schema 检查需要允许本机回环监听。缺少能力时记录 not_run/环境限制，不称插件通过端到端验收。运行文件快照见 [product-source-sha256-v1.0.0.json](evidence/product-source-sha256-v1.0.0.json)。

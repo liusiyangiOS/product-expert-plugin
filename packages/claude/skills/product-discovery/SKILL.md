@@ -14,3 +14,7 @@ product-strategist 提机会，product-researcher 核验证据与替代方案；
 用可解释的取舍推荐优先验证方向；不靠堆功能显示创意。可以建议先用人工服务/原型验证而非马上开发。采用 [产品简报](../product-shared/templates/product-brief.md) 记录选定方向和未验证假设。模拟 persona 或角色讨论不是访谈证据。
 
 用户要继续落地时进入 product-expert-team 的需求阶段；开发意图明确则按 product-dev-bridge 接续。单次机会探索不自动变成持续监测。
+
+## 机会到验证
+
+按 [产品方法](../product-shared/product-methods.md) 先区分目标结果、用户机会与候选方案，再排序会推翻方向的关键假设；需要实验时使用 [实验卡](../product-shared/templates/product-experiment.md)。策略师可自行搜索，不因没有研究员就只凭空想象。多方案或需后续复用时按 [Graph 协议](../product-shared/product-graph.md) 关联来源、反证、方案、假设与实验；没有真实执行则保留未验证状态。

@@ -1,0 +1,42 @@
+[
+  {
+    "repo": "phuryn/pm-skills",
+    "stars": 27421,
+    "pushed_at": "2026-10-16T12:28:37Z",
+    "license": "MIT",
+    "default_branch": "main",
+    "source": "https://api.github.com/repos/phuryn/pm-skills",
+    "checked_date": "2026-10-27",
+    "signal": "GitHub stars are popularity only; not efficacy"
+  },
+  {
+    "repo": "deanpeters/Product-Manager-Skills",
+    "stars": 7700,
+    "pushed_at": "2026-10-16T01:51:12Z",
+    "license": "NOASSERTION",
+    "default_branch": "main",
+    "source": "https://api.github.com/repos/deanpeters/Product-Manager-Skills",
+    "checked_date": "2026-10-27",
+    "signal": "GitHub stars are popularity only; not efficacy"
+  },
+  {
+    "repo": "bmad-code-org/BMAD-METHOD",
+    "stars": 54620,
+    "pushed_at": "2026-10-20T03:24:19Z",
+    "license": "NOASSERTION",
+    "default_branch": "main",
+    "source": "https://api.github.com/repos/bmad-code-org/BMAD-METHOD",
+    "checked_date": "2026-10-27",
+    "signal": "GitHub stars are popularity only; not efficacy"
+  },
+  {
+    "repo": "msitarzewski/agency-agents",
+    "stars": 164406,
+    "pushed_at": "2026-10-25T01:43:20Z",
+    "license": "MIT",
+    "default_branch": "main",
+    "source": "https://api.github.com/repos/msitarzewski/agency-agents",
+    "checked_date": "2026-10-27",
+    "signal": "GitHub stars are popularity only; not efficacy"
+  }
+]

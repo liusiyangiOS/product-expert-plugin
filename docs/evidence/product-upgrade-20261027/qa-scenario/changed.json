@@ -1,0 +1,238 @@
+{
+  "missing": [],
+  "changed": [
+    {
+      "id": "local",
+      "ref": "research.md",
+      "expected": "sha256:11f304d0a5d72a699d38ee5a64446f25acde1698733524e351829a0bc09dedc1",
+      "actual": "sha256:b345a6bce4f1ea43f8184e30bb605a2aa121b9d96f3c557e865b9a134de5bff2"
+    }
+  ],
+  "unsafe": [],
+  "remote_unverified": [
+    {
+      "id": "remote",
+      "ref": "https://example.invalid/research",
+      "reason": "未联网核验；记录的 version 不证明远端内容新鲜"
+    }
+  ],
+  "local_verified": [],
+  "impacts": [
+    {
+      "source": "local",
+      "status": "changed",
+      "seeds": [
+        "evidence",
+        "hyp"
+      ],
+      "paths": [
+        {
+          "start": "evidence",
+          "nodes": [
+            "evidence",
+            "hyp",
+            "req",
+            "design",
+            "accept"
+          ],
+          "triggers": [
+            {
+              "edge_index": 0,
+              "from": "evidence",
+              "to": "hyp",
+              "relation": "supports",
+              "basis": "observed",
+              "sources": [
+                "local"
+              ],
+              "propagation_from": "evidence",
+              "propagation_to": "hyp"
+            },
+            {
+              "edge_index": 2,
+              "from": "hyp",
+              "to": "req",
+              "relation": "motivates",
+              "basis": "hypothesis",
+              "sources": [],
+              "propagation_from": "hyp",
+              "propagation_to": "req"
+            },
+            {
+              "edge_index": 3,
+              "from": "req",
+              "to": "design",
+              "relation": "realized_by",
+              "basis": "inferred",
+              "sources": [],
+              "propagation_from": "req",
+              "propagation_to": "design"
+            },
+            {
+              "edge_index": 4,
+              "from": "design",
+              "to": "accept",
+              "relation": "verified_by",
+              "basis": "inferred",
+              "sources": [],
+              "propagation_from": "design",
+              "propagation_to": "accept"
+            }
+          ],
+          "note": "影响是待核验的传播线索；inferred/hypothesis 关系不构成已观察事实。"
+        },
+        {
+          "start": "hyp",
+          "nodes": [
+            "hyp",
+            "req",
+            "design",
+            "accept"
+          ],
+          "triggers": [
+            {
+              "edge_index": 2,
+              "from": "hyp",
+              "to": "req",
+              "relation": "motivates",
+              "basis": "hypothesis",
+              "sources": [],
+              "propagation_from": "hyp",
+              "propagation_to": "req"
+            },
+            {
+              "edge_index": 3,
+              "from": "req",
+              "to": "design",
+              "relation": "realized_by",
+              "basis": "inferred",
+              "sources": [],
+              "propagation_from": "req",
+              "propagation_to": "design"
+            },
+            {
+              "edge_index": 4,
+              "from": "design",
+              "to": "accept",
+              "relation": "verified_by",
+              "basis": "inferred",
+              "sources": [],
+              "propagation_from": "design",
+              "propagation_to": "accept"
+            }
+          ],
+          "note": "影响是待核验的传播线索；inferred/hypothesis 关系不构成已观察事实。"
+        }
+      ]
+    },
+    {
+      "source": "remote",
+      "status": "remote_unverified",
+      "seeds": [
+        "counter",
+        "hyp"
+      ],
+      "paths": [
+        {
+          "start": "counter",
+          "nodes": [
+            "counter",
+            "hyp",
+            "req",
+            "design",
+            "accept"
+          ],
+          "triggers": [
+            {
+              "edge_index": 1,
+              "from": "counter",
+              "to": "hyp",
+              "relation": "challenges",
+              "basis": "hypothesis",
+              "sources": [
+                "remote"
+              ],
+              "propagation_from": "counter",
+              "propagation_to": "hyp"
+            },
+            {
+              "edge_index": 2,
+              "from": "hyp",
+              "to": "req",
+              "relation": "motivates",
+              "basis": "hypothesis",
+              "sources": [],
+              "propagation_from": "hyp",
+              "propagation_to": "req"
+            },
+            {
+              "edge_index": 3,
+              "from": "req",
+              "to": "design",
+              "relation": "realized_by",
+              "basis": "inferred",
+              "sources": [],
+              "propagation_from": "req",
+              "propagation_to": "design"
+            },
+            {
+              "edge_index": 4,
+              "from": "design",
+              "to": "accept",
+              "relation": "verified_by",
+              "basis": "inferred",
+              "sources": [],
+              "propagation_from": "design",
+              "propagation_to": "accept"
+            }
+          ],
+          "note": "影响是待核验的传播线索；inferred/hypothesis 关系不构成已观察事实。"
+        },
+        {
+          "start": "hyp",
+          "nodes": [
+            "hyp",
+            "req",
+            "design",
+            "accept"
+          ],
+          "triggers": [
+            {
+              "edge_index": 2,
+              "from": "hyp",
+              "to": "req",
+              "relation": "motivates",
+              "basis": "hypothesis",
+              "sources": [],
+              "propagation_from": "hyp",
+              "propagation_to": "req"
+            },
+            {
+              "edge_index": 3,
+              "from": "req",
+              "to": "design",
+              "relation": "realized_by",
+              "basis": "inferred",
+              "sources": [],
+              "propagation_from": "req",
+              "propagation_to": "design"
+            },
+            {
+              "edge_index": 4,
+              "from": "design",
+              "to": "accept",
+              "relation": "verified_by",
+              "basis": "inferred",
+              "sources": [],
+              "propagation_from": "design",
+              "propagation_to": "accept"
+            }
+          ],
+          "note": "影响是待核验的传播线索；inferred/hypothesis 关系不构成已观察事实。"
+        }
+      ]
+    }
+  ],
+  "local_fresh": false,
+  "note": "只检查明确引用的本地文件；内容哈希相同不证明业务结论正确。影响是待核验的传播线索；inferred/hypothesis 关系不构成已观察事实。"
+}

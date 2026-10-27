@@ -17,3 +17,7 @@ product-reviewer 独立评审，按任务选择而非强制全做：
 每项发现给证据、影响、优先级、是否阻断和具体修订建议。输出 pass/fail/not_run/inconclusive 及适用范围；没有用户数据可通过需求可实施性审查，但用户价值仍未验证。缺独立执行面时标记自查，不冒充独立评审。
 
 产品文档/设计修订回对应 owner；代码缺陷经 product-dev-bridge 返回开发，不由 reviewer 偷改。遵守同版本两轮自动修订上限。使用 [验证记录](../product-shared/templates/product-validation.md)，只在相关输入变化后重验。
+
+## 风险、指标与关系核验
+
+按 [产品方法](../product-shared/product-methods.md) 检查实际取舍、非目标和可测试完成条件，审查深度与风险匹配。实验验收核对指标口径/窗口/来源、保护指标、样本限制及真实结果，未知数据写unknown。已有图时按 [Graph 协议](../product-shared/product-graph.md) 核验关键关系及来源变更影响；结构合法、DAG无环或自动返回ready不能代替有效授权、事实核验和真实用户效果。

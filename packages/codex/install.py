@@ -15,7 +15,7 @@ ROLES = {"product-team-lead", "product-strategist", "product-researcher", "produ
          "product-ux-designer", "product-ui-designer", "product-tech-analyst", "product-reviewer"}
 SKILLS = {"product-expert-team", "product-discovery", "product-project-audit",
           "product-design", "product-dev-bridge", "product-validation", "product-shared"}
-VERSION = "1.0.0"
+VERSION = "1.1.0"
 PACKAGE_NAME = "product-expert-codex"
 
 
@@ -111,7 +111,10 @@ def payload():
         if f".agents/skills/{name}/SKILL.md" not in files:
             raise ValueError(f"安装包缺少技能：{name}")
     for required in ("product-runtime.md", "product-workflow-contract.md", "product-dev-contract.md",
-                     "product-design-platforms.md", "product-research.md", "product_bridge.py"):
+                     "product-design-platforms.md", "product-research.md", "product_bridge.py",
+                     "product-methods.md", "product-graph.md", "product_graph.py",
+                     "templates/product-graph.json", "templates/product-experiment.md",
+                     "templates/product-decision.md"):
         if f".agents/skills/product-shared/{required}" not in files:
             raise ValueError(f"安装包缺少共享资源：{required}")
     return files

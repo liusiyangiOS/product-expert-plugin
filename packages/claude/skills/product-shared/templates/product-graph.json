@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "description": "完全合成的格式示例：不是调研结果或真实业务证据。复制后必须替换来源、版本、假设与验收记录。",
+  "sources": [
+    {
+      "id": "synthetic-example",
+      "kind": "url",
+      "ref": "https://example.invalid/synthetic-product-graph",
+      "version": "synthetic-v1-not-business-evidence"
+    }
+  ],
+  "nodes": [
+    {"id": "outcome", "type": "outcome", "label": "合成目标：提高首次任务完成率", "sources": ["synthetic-example"], "status": "synthetic"},
+    {"id": "opportunity", "type": "opportunity", "label": "合成机会：用户可能不理解首次操作", "sources": ["synthetic-example"], "status": "unverified"},
+    {"id": "solution", "type": "solution", "label": "候选方案：提供可编辑的首次任务示例", "sources": ["synthetic-example"], "status": "proposed"},
+    {"id": "hypothesis", "type": "hypothesis", "label": "待验证假设：示例可能降低首次操作理解成本", "sources": ["synthetic-example"], "status": "unverified"},
+    {"id": "experiment", "type": "experiment", "label": "合成实验计划：观察参与者能否独立完成示例", "sources": ["synthetic-example"], "status": "planned"},
+    {"id": "requirement", "type": "requirement", "label": "合成需求：首次进入时可选择并编辑示例", "sources": ["synthetic-example"], "status": "draft"},
+    {"id": "design", "type": "design", "label": "合成设计：示例入口与编辑状态", "sources": ["synthetic-example"], "status": "draft"},
+    {"id": "acceptance", "type": "acceptance", "label": "合成验收：编辑后可创建任务，失败时保留输入", "sources": ["synthetic-example"], "status": "planned"},
+    {"id": "metric", "type": "metric", "label": "合成指标定义：首次进入后完成任务的人数占比；尚无实测值", "sources": ["synthetic-example"], "status": "undefined-baseline"}
+  ],
+  "edges": [
+    {"from": "outcome", "to": "opportunity", "relation": "motivates", "basis": "hypothesis", "sources": ["synthetic-example"]},
+    {"from": "opportunity", "to": "solution", "relation": "motivates", "basis": "hypothesis", "sources": ["synthetic-example"]},
+    {"from": "solution", "to": "hypothesis", "relation": "motivates", "basis": "hypothesis", "sources": ["synthetic-example"]},
+    {"from": "hypothesis", "to": "experiment", "relation": "verified_by", "basis": "hypothesis", "sources": ["synthetic-example"]},
+    {"from": "experiment", "to": "requirement", "relation": "motivates", "basis": "hypothesis", "sources": ["synthetic-example"]},
+    {"from": "requirement", "to": "design", "relation": "realized_by", "basis": "inferred", "sources": ["synthetic-example"]},
+    {"from": "design", "to": "acceptance", "relation": "verified_by", "basis": "inferred", "sources": ["synthetic-example"]},
+    {"from": "acceptance", "to": "metric", "relation": "measured_by", "basis": "inferred", "sources": ["synthetic-example"]}
+  ],
+  "tasks": [
+    {"id": "define-requirement", "depends_on": [], "owner": "示例产品负责人", "write_scope": ["docs/requirement.md"], "status": "pending", "acceptance": ["替换合成来源并记录需求与假设的关系"], "evidence": []},
+    {"id": "create-design", "depends_on": ["define-requirement"], "owner": "示例设计负责人", "write_scope": ["docs/design.md"], "status": "pending", "acceptance": ["覆盖示例选择、编辑和失败恢复状态"], "evidence": []}
+  ]
+}

@@ -37,3 +37,7 @@ dev-to-product / clarify：产品经理处理规则，策略师处理方向，UX
 需求/设计/代码变化时增加 revision，记录 delta 和失效的验收，先通知接收方再继续；同一需求的咨询以子 request_id + parent_request_id 关联，避免往返派发循环。同一版本最多两轮自动澄清；仍有关键业务冲突才问用户，不把技术不确定性伪装成业务审批。
 
 缺少开发插件：完成交接包并标记 blocked / capability_missing，继续能独立完成的产品工作；不能声称已开发。用户未授权实现：保持 ready 或 draft，说明下一步需要的具体决定；已有“直接开发”授权不重复问。
+
+## 可选产品图上下文
+
+已有图时在artifacts里附kind=product-graph、ref和version，并按 [Graph 协议](product-graph.md) 给出相关节点/关系、GRAPH状态、失效来源与待重验项。保持schema_version=1，图不是新的必填前提；无图的小任务照常交接。产品节点变化后由原主理人核对影响并发送版本delta，不新增开发侧自动路由或改变调度权。
