@@ -1,6 +1,6 @@
 ---
 name: product-design
-description: 根据需求制作 UX 原型及实际高保真 UI、组件与开发标注；按可用能力适配不同设计平台。
+description: 根据需求制作 UX 原型及实际高保真 UI、组件与开发标注，定义 UI 完成度契约；按可用能力适配设计平台。
 ---
 
 # 产品界面设计
@@ -18,3 +18,7 @@ product-reviewer 对固定产物检查需求一致性、视觉层级、可访问
 ## 设计变更追踪
 
 已有产品图或跨页面需求时，按 [Graph 协议](../product-shared/product-graph.md) 保留需求→页面/组件→验收关系及真实平台版本。设计改动先核对受影响的需求与状态，由主理人合并增量；本地文件哈希不能代替远端平台回读。小型设计保持轻量，不为图强制扩大交付。
+
+## UI 完成度契约与审查
+
+设计交付或界面评审按需读取 [UI 方法](../product-shared/product-ui-review.md)。product-ui-designer 负责用户任务、信息/操作层级、密度/交互/窄屏和品牌约束契约；product-reviewer 对固定版本的实际界面与相关状态独立审查，按 [记录模板](../product-shared/templates/product-ui-review.md) 交付可定位问题、影响、未测与复验方法。工程实现验证沿用 product-dev-bridge。

@@ -1,6 +1,6 @@
 ---
 name: product-validation
-description: 独立检查产品假设、需求、设计或实际实现，制定验证并区分交付质量与真实用户效果。
+description: 独立检查产品假设、需求、用户反馈证据及实际界面完成度，制定验证并区分交付质量与真实用户效果。
 ---
 
 # 产品验证与验收
@@ -21,3 +21,7 @@ product-reviewer 独立评审，按任务选择而非强制全做：
 ## 风险、指标与关系核验
 
 按 [产品方法](../product-shared/product-methods.md) 检查实际取舍、非目标和可测试完成条件，审查深度与风险匹配。实验验收核对指标口径/窗口/来源、保护指标、样本限制及真实结果，未知数据写unknown。已有图时按 [Graph 协议](../product-shared/product-graph.md) 核验关键关系及来源变更影响；结构合法、DAG无环或自动返回ready不能代替有效授权、事实核验和真实用户效果。
+
+## UI 完成度与反馈证据
+
+界面审查时读取 [UI 方法](../product-shared/product-ui-review.md)，复用 UI 设计师的产品任务契约，对实际界面及相关状态独立判断；缺契约先请求补齐，未渲染/未交互项不称通过。反馈驱动的结论按 [反馈方法](../product-shared/product-feedback.md) 核对来源、去重依据、用户数/反馈次数/分母、严重少数问题与反证，再审主题→决定→需求映射。

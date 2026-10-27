@@ -1,6 +1,6 @@
 # 产品专家团 1.1.0 升级验收
 
-日期：2026-10-27。平台：macOS 26.3.1 arm64；Python 3.14.6。源码基线 `0633d8b772bb8cda39777dfb7546e165dd0d23aa`；验证在 `feature/1027/product-graph-upgrade` 工作区进行，随后按用户要求转到 `master` 提交。本报告绑定运行文件快照，完整哈希见 [源码快照](evidence/product-source-sha256.json)。
+日期：2026-10-27。平台：macOS 26.3.1 arm64；Python 3.14.6。源码基线 `0633d8b772bb8cda39777dfb7546e165dd0d23aa`；验证在 `feature/1027/product-graph-upgrade` 工作区进行，随后按用户要求转到 `master` 提交。本报告绑定运行文件快照，完整哈希见 [源码快照](evidence/product-source-sha256-v1.1.0.json)。
 
 ## 交付范围
 

@@ -1,7 +1,7 @@
 {
   "name": "product-expert-plugin",
   "description": "产品专家团：8 个专家、6 个工作流，覆盖主动构思、调研、需求、UX/UI、老项目分析及双向开发协作。",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": {
     "name": "liusiyang"
   }

@@ -42,3 +42,9 @@ python3 packages/codex/skills/product-shared/product_bridge.py validate /absolut
 ```
 
 Claude 包同一路径结构下也有独立副本。模板是 draft；不要直接把 status 改 ready 而不补真实字段。校验器只读，不发网络请求、不派发任务、不检查远端链接，也不证明实际验收成功。
+
+## UI 与反馈的按需交接
+
+1.2.0 沿用原桥接 schema 与入口，不要求开发包增加文件。UI 设计师定义用户任务、信息/操作层级、密度/交互/窄屏与品牌约束；product-reviewer 独立核验实际界面，开发侧负责实现一致性及工程验证。双方记录需求/页面/路径 ID、版本/输入快照、预期/实际、证据定位、检查环境、结论与未测、owner/复验，放入现有 artifacts/acceptance/result。实际界面未看过、交互未执行或证据不足的项保留 not_run/inconclusive，UI 通过不代表业务结果通过。性能要求由产品定义真实用户路径、指标口径和目标依据，工程测量仍走已有开发流程。
+
+反馈驱动需求时附主题证据→机会→决定→需求映射、反证与未知项，不传递无关个人资料。变更由原调度者传 revision 差异，成员把图增量交唯一写入者。方法与可裁剪记录见 [UI 审查](../packages/codex/skills/product-shared/product-ui-review.md) 和 [反馈归纳](../packages/codex/skills/product-shared/product-feedback.md)。

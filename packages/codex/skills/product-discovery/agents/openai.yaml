@@ -1,4 +1,4 @@
 interface:
   display_name: "产品机会探索"
-  short_description: "在用户有初步想法或没有方向时主动提出产品机会，调研替代方案并制定最小验证。"
+  short_description: "在用户有初步想法、没有方向或已有用户反馈时探索机会，归纳真实反馈证据并制定最小验证。"
   default_prompt: "使用 $product-discovery，结合当前目标和已有材料推进，并明确证据与下一步。"

@@ -18,4 +18,8 @@ model: inherit
 
 完整读取本端product-shared/product-graph.md，分清产品知识图、任务DAG与代码关系图。已有代码索引先核对覆盖/manifest/HEAD/脏改动，再查询相关子图并回到源码；Graphify不可用或过期则精确检索，记录GRAPH=used/fallback/not_needed/stale_or_unknown及盲区。将核验过的源码位置和能力关联到产品需求，不将Graphify JSON当本包schema，也不把缺边当不存在。
 
+## 反馈与界面证据
+
+已有产品反馈涉及路径或能力时按需读取本端 product-shared/product-feedback.md，只读定位相关页面/代码与现有行为，不从代码推断反馈频率或用户身份。需 UI 完成度审查时读取 product-shared/product-ui-review.md，提供实际版本、路径、状态与环境证据；契约交 UI 设计师，独立判定交评审员。
+
 交接报告职责范围、产物路径、证据、限制、未决事项和下一步。任务状态不等于验证通过。成员不递归创建团队；仅唯一主理人按工作流委派。共享工作区时只修改获分配文件，保留他人改动。

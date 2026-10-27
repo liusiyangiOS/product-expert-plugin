@@ -1,0 +1,79 @@
+{
+  "synthetic": true,
+  "population_size": null,
+  "sampling": "自愿反馈；不是代表性抽样",
+  "items": [
+    {
+      "id": "f1",
+      "source": "support/ticket-18",
+      "person": "u1",
+      "date": "2026-10-21",
+      "segment": "新用户",
+      "text": "保存后列表里看不见，重新打开才出现",
+      "occurrence": "event-18"
+    },
+    {
+      "id": "f2",
+      "source": "community/post-23",
+      "person": "u1",
+      "date": "2026-10-21",
+      "segment": "新用户",
+      "text": "把我 ticket-18 的问题贴过来：保存后列表里看不见",
+      "occurrence": "event-18"
+    },
+    {
+      "id": "f3",
+      "source": "support/ticket-31",
+      "person": "u2",
+      "date": "2026-10-22",
+      "segment": "新用户",
+      "text": "保存后列表里看不见，重新打开才出现",
+      "occurrence": "event-31"
+    },
+    {
+      "id": "f4",
+      "source": "review/anon-1",
+      "person": null,
+      "date": "2026-10-22",
+      "segment": null,
+      "text": "保存后列表里看不见，重新打开才出现",
+      "occurrence": null
+    },
+    {
+      "id": "f5",
+      "source": "support/ticket-40",
+      "person": "u3",
+      "date": "2026-10-23",
+      "segment": "老用户",
+      "text": "希望批量删除，清理记录太慢",
+      "occurrence": "event-40"
+    },
+    {
+      "id": "f6",
+      "source": "interview/session-2",
+      "person": "u4",
+      "date": "2026-10-23",
+      "segment": "老用户",
+      "text": "不要一键删除，之前误删后找不回很麻烦",
+      "occurrence": "event-41"
+    },
+    {
+      "id": "f7",
+      "source": "support/ticket-51",
+      "person": "u5",
+      "date": "2026-10-24",
+      "segment": "老用户",
+      "text": "退出账号后，下一位登录者看到了我的私人记录",
+      "occurrence": "event-51"
+    },
+    {
+      "id": "f8",
+      "source": "survey/r8",
+      "person": "u6",
+      "date": "2026-10-24",
+      "segment": "新用户",
+      "text": "我这里保存后立即看到了，没遇到这个问题",
+      "occurrence": "event-52"
+    }
+  ]
+}

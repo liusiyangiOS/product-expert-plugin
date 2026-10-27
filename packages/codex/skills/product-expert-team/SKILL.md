@@ -26,3 +26,7 @@ description: 从想法或已有产品组织机会探索、调研、需求、UX/U
 ## 方法与 Graph 接入
 
 按 [产品方法](../product-shared/product-methods.md) 收敛机会、关键假设、实验、指标与优先级。复杂或跨阶段任务读取 [Graph 协议](../product-shared/product-graph.md)，分别维护产品关系和任务依赖；先核对来源与ready节点再派发，主理人合入各角色增量。简单讨论可用表格并记GRAPH=not_needed；图不构成额外审批或自动执行引擎。
+
+## 反馈与界面审查
+
+有真实反馈待整理时，由 product-researcher 按 [反馈方法](../product-shared/product-feedback.md) 归纳证据，product-manager 记录决定及需求映射。需要 UI 完成度审查时进入 product-validation，按 [UI 方法](../product-shared/product-ui-review.md) 由设计师定义契约、评审员独立审查；不自动启动改版或开发。

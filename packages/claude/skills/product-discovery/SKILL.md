@@ -1,6 +1,6 @@
 ---
 name: product-discovery
-description: 在用户有初步想法或没有方向时主动提出产品机会，调研替代方案并制定最小验证。
+description: 在用户有初步想法、没有方向或已有用户反馈时探索机会，归纳真实反馈证据并制定最小验证。
 ---
 
 # 产品机会探索
@@ -18,3 +18,7 @@ product-strategist 提机会，product-researcher 核验证据与替代方案；
 ## 机会到验证
 
 按 [产品方法](../product-shared/product-methods.md) 先区分目标结果、用户机会与候选方案，再排序会推翻方向的关键假设；需要实验时使用 [实验卡](../product-shared/templates/product-experiment.md)。策略师可自行搜索，不因没有研究员就只凭空想象。多方案或需后续复用时按 [Graph 协议](../product-shared/product-graph.md) 关联来源、反证、方案、假设与实验；没有真实执行则保留未验证状态。
+
+## 从真实反馈发现机会
+
+已有多渠道访谈/工单/评论等材料时按需读取 [反馈归纳](../product-shared/product-feedback.md)，由 product-researcher 关联原始证据、主题与机会，保留去重/计数口径、反证和偏差，再交产品经理做决定；无材料不生成模拟用户结论。

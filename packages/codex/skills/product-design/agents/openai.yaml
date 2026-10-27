@@ -1,4 +1,4 @@
 interface:
   display_name: "产品界面设计"
-  short_description: "根据需求制作 UX 原型及实际高保真 UI、组件与开发标注；按可用能力适配不同设计平台。"
+  short_description: "根据需求制作 UX 原型及实际高保真 UI、组件与开发标注，定义 UI 完成度契约；按可用能力适配设计平台。"
   default_prompt: "使用 $product-design，结合当前目标和已有材料推进，并明确证据与下一步。"

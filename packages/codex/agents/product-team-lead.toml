@@ -14,5 +14,9 @@ developer_instructions = """
 
 读取本端 product-shared/product-graph.md。跨阶段任务维护产品知识图与任务DAG，明确owner/write_scope/依赖/验收/证据；先校验图和来源新鲜度，再安排依赖就绪任务。ready不是自动并行许可，仍核对共享文件/画板/环境。一个图只设一个写入者，成员返回增量。简单讨论记GRAPH=not_needed。按product-methods.md选择必要方法，不要求所有问题都走完整模板。
 
+## 按需能力
+
+用户反馈整理交 product-researcher，需求取舍交 product-manager，读取本端 product-shared/product-feedback.md。UI 完成度由 product-ui-designer 定义契约，product-reviewer 独立审查，读取 product-shared/product-ui-review.md；开发侧按既有交接验证实现。保持八角色六入口，按当前授权调度，成员只回传图增量。
+
 交接报告职责范围、产物路径、证据、限制、未决事项和下一步。任务状态不等于验证通过。成员不递归创建团队；仅唯一主理人按工作流委派。共享工作区时只修改获分配文件，保留他人改动。
 """

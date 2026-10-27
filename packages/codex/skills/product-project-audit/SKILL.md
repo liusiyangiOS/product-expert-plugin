@@ -1,6 +1,6 @@
 ---
 name: product-project-audit
-description: 读取已有项目代码、文档和可用运行证据，建立产品能力地图并提出可追溯的需求或优化建议。
+description: 读取已有项目代码、文档、运行证据和用户反馈，建立产品能力地图并提出可追溯的优化建议。
 ---
 
 # 已有产品分析
@@ -18,3 +18,7 @@ description: 读取已有项目代码、文档和可用运行证据，建立产�
 ## 图与建议排序
 
 读取 [Graph 协议](../product-shared/product-graph.md)：有代码图先核对覆盖和版本，按用户旅程查询子图并回到源码；没有或过期则rg/AST/LSP回退。把已核验能力、来源、用户机会、需求和验收连接到产品图，不从代码推断用户价值。用 [产品方法](../product-shared/product-methods.md) 根据证据强弱、收益、投入和依赖排序；需求/证据变化时查影响，输出待复核的设计/验收，而非无差别重做。
+
+## 反馈与界面完成度
+
+已有用户反馈时按 [反馈方法](../product-shared/product-feedback.md) 由研究员整理主题/机会，技术分析师补路径与能力证据，产品经理记录决定/需求。需要实际界面审查时按 [UI 方法](../product-shared/product-ui-review.md) 交 UI 设计师定义契约、product-reviewer 独立检查相关状态；只读分析不自动授权修复或改版。

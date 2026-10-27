@@ -228,7 +228,8 @@ class InstallerBehavior:
         """模拟已受管旧版：没有新增资源，现有技能还是旧正文。"""
         desired = self.module.payload()
         new_names = {"product-methods.md", "product-graph.md", "product_graph.py",
-                     "product-graph.json", "product-experiment.md", "product-decision.md"}
+                     "product-graph.json", "product-experiment.md", "product-decision.md",
+                     "product-feedback.md", "product-ui-review.md"}
         old = {name: data for name, data in desired.items() if Path(name).name not in new_names}
         old[f"{self.skillroot}/product-design/SKILL.md"] = b"previous managed skill version\n"
         return old
@@ -267,6 +268,36 @@ class InstallerBehavior:
             with self.assertRaises(ValueError):
                 self.run_installer()
         self.assertFalse(self.state.exists())
+
+    def test_upgrade_110_installs_capability_resources_and_tracks_them(self):
+        desired = self.module.payload()
+        resources = ("product-feedback.md", "product-ui-review.md",
+                     "templates/product-feedback.md", "templates/product-ui-review.md")
+        paths = [f"{self.skillroot}/product-shared/{name}" for name in resources]
+        old = {name: data for name, data in desired.items() if name not in paths}
+        with patch.object(self.module, "payload", return_value=old), patch.object(self.module, "VERSION", "1.1.0"):
+            self.run_installer()
+        self.assertTrue(all(not (self.home / name).exists() for name in paths))
+        self.run_installer()
+        self.run_installer("check")
+        manifest = json.loads(self.state.read_text())
+        self.assertEqual(manifest["version"], self.module.VERSION)
+        for name in paths:
+            data = (self.home / name).read_bytes()
+            self.assertEqual(data, desired[name])
+            self.assertEqual(manifest["files"][name], self.module.digest(data))
+
+    def test_missing_capability_resource_refuses_install_before_any_write(self):
+        for resource in ("product-feedback.md", "product-ui-review.md",
+                         "templates/product-feedback.md", "templates/product-ui-review.md"):
+            with self.subTest(resource=resource), tempfile.TemporaryDirectory() as source:
+                package = Path(source) / "package"
+                shutil.copytree(self.module.PACKAGE, package, ignore=shutil.ignore_patterns("__pycache__"))
+                (package / "skills/product-shared" / resource).unlink()
+                with patch.object(self.module, "PACKAGE", package), self.assertRaises(ValueError):
+                    self.run_installer()
+                self.assertFalse(self.state.exists())
+                self.assertFalse(self.sample.exists())
 
     def test_installed_graph_cli_uses_own_package(self):
         self.run_installer()

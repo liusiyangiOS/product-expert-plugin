@@ -1,12 +1,13 @@
 # 产品专家团 · Product Expert Plugin
 
+本版安装、验证证据与覆盖边界见 [1.2.0 能力升级验收](docs/product-capabilities-validation.md)。
 把一个想法、一个还没有方向的愿望，或一个正在维护的产品，推进到有证据的产品决策、实际界面设计和可执行开发需求。
 
 采用 **`product-` 前缀**。产品战略、用户研究、需求、体验与 UI 都属于产品工作；无需拆成 `idea-`、`design-` 等容易分散的多套命名。每端包含 **8 个专家、6 个工作流、`product-shared`**。安装清单和备份也独立于开发专家团，不占用 `dev-*` 或 `dev-shared`。
 
 本仓库后续修改直接在 `master` 进行，不新建工作分支；具体协作约定见 [AGENTS.md](AGENTS.md)。
 
-提供独立 Codex 包及 Claude 插件/个人安装包。当前为本地 1.1.0 升级，新增按需产品方法与 Graph，仍保留 8 个专家和 6 个入口。新版是否安装与实际验证范围见 [升级验收](docs/product-graph-upgrade-validation.md)；[1.0.0 初始验证](docs/product-validation-report.md) 作为历史记录。
+提供独立 Codex 包及 Claude 插件/个人安装包。当前版本 1.2.0，在产品方法与 Graph 基础上新增按需 UI 完成度审查和用户反馈归纳，仍保留 8 个专家和 6 个入口。[1.1.0 升级验收](docs/product-graph-upgrade-validation.md) 与 [1.0.0 初始验证](docs/product-validation-report.md) 为历史记录，不代表本版安装或业务验收。
 
 ## 四个核心能力
 
@@ -21,23 +22,32 @@
 | --- | --- |
 | `product-team-lead` | 单一调度，管理目标、证据、版本、任务与交接 |
 | `product-strategist` | 主动发现机会、推敲定位、比较价值与验证成本 |
-| `product-researcher` | 用户/市场/竞品与替代方案研究，核验来源 |
+| `product-researcher` | 用户/市场/竞品研究，多渠道反馈归纳与来源核验 |
 | `product-manager` | MVP、业务规则、优先级、需求和可观测验收 |
 | `product-ux-designer` | 用户旅程、信息结构、交互与原型 |
-| `product-ui-designer` | 实际高保真设计、组件/状态、设计规范和资源 |
+| `product-ui-designer` | 实际高保真设计、组件/状态、设计规范和 UI 完成度契约 |
 | `product-tech-analyst` | 直接读旧项目代码，建立能力地图和可行性证据 |
-| `product-reviewer` | 独立挑战假设、核验需求/设计/实际产品效果 |
+| `product-reviewer` | 独立挑战假设、审查反馈证据与实际 UI 完成度，分层验收 |
 
 | Skill | 入口用途 |
 | --- | --- |
 | `product-expert-team` | 跨阶段主入口，按当前产品阶段路由 |
-| `product-discovery` | 有想法讨论、无想法主动探索机会 |
-| `product-project-audit` | 已有产品分析、能力地图和优化建议 |
+| `product-discovery` | 有想法讨论、无想法主动探索、从真实反馈发现机会 |
+| `product-project-audit` | 已有产品分析、能力地图、反馈与界面优化建议 |
 | `product-design` | UX 原型和实际高保真 UI 交付 |
 | `product-dev-bridge` | 产品→开发、开发→产品的双向交接 |
-| `product-validation` | 假设验证、需求就绪、设计和产品验收 |
+| `product-validation` | 假设验证、需求就绪、反馈证据、实际 UI 与产品验收 |
 
 简单讨论不要求八人同时出场。产品与开发切换时保留一个调度者，避免产品团内部再套一层开发团；独立评审需要真实独立执行面，单 Agent 自查会明确标记。
+
+## 1.2.0：反馈归纳与 UI 完成度
+
+两项能力复用现有角色和入口，细节按需读取 shared 方法与轻量模板，不增加角色、技能或脚本。方法参考固定版本的 Agency Agents，采用自主表述，不安装外部角色。
+
+- **反馈归纳**：从 discovery、project-audit 或团队入口进入。研究员保留多渠道原话、来源定位、时间、人群与场景，记录去重依据，分别统计反馈次数、可确认独立用户和样本分母；不凭文本相似或跨渠道猜测身份。主题保留反证、采样偏差和低频严重问题，产品经理记录机会→决定→需求映射。诉求是候选解法，情感分数不充当事实。详见 [反馈方法及来源](packages/codex/skills/product-shared/product-feedback.md)。
+- **UI 完成度**：从 design 或 validation 进入，已有项目也可按需调用。UI 设计师定义用户任务、首要信息/主要操作、密度、交互、窄屏与品牌约束；评审员独立查看实际界面及相关状态。问题必须可定位，给出用户影响和复核方法，证据不足保留 not_run/inconclusive；审美标签不自动阻断，也不强制改版。详见 [UI 方法及来源](packages/codex/skills/product-shared/product-ui-review.md)。
+
+交接复用现有桥接，携带需求/页面/路径 ID、版本/快照、预期/实际、证据定位、环境、结论/未测、owner/复验。开发侧验证实现与工程质量；产品视觉结论与真实用户业务效果分别报告。性能只定义真实路径、口径、目标依据，测量交现有开发团队。反馈与 UI 关系复用 Graph schema=1，由唯一写入者合并增量；不会自动联系用户、扩大采集或启动开发。
 
 ## 1.1.0：借鉴的产品方法与 Graph
 
@@ -127,6 +137,10 @@ $product-discovery 我还没有点子，每周能投入两天，想做一个自�
 $product-expert-team 我想做一个类似“钱包请等等”的小程序。先研究真实产品，再和我收敛用户、差异和 MVP。
 
 $product-design 根据当前需求制作高保真 UI，优先使用我已连接的设计平台，交付实际源稿、预览和开发标注。
+
+$product-validation 按现有品牌和用户任务审查这版界面的完成度，检查核心路径及相关窄屏、加载和错误状态，给出证据、影响和复验方法。
+
+$product-project-audit 整理这些客服工单、访谈和评论，保留来源及去重依据，区分反馈次数与用户数，给出主题、反证、建议和需求映射。
 
 $product-project-audit 分析当前项目的产品能力和体验，只读代码，给我有证据的优化建议。
 

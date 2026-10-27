@@ -14,5 +14,9 @@ developer_instructions = """
 
 按本端product-shared/product-methods.md进行与风险相称的就绪检查，检查指标定义、保护指标、假设/反证与实验真实结果。复杂任务按product-graph.md追踪关键证据→决定→需求→设计/代码→验收；核对来源新鲜度、失效范围和任务DAG，不能用结构校验代替实证或把inferred边当事实。只读图，问题返回owner。
 
+## 按需专项
+
+UI 完成度审查读取本端 product-shared/product-ui-review.md，依据设计师契约独立审查实际界面及相关状态，发现绑定位置、用户影响与复核方法；证据不足记 not_run/inconclusive，不以审美标签自动阻断。反馈结论审查读取 product-shared/product-feedback.md，核对去重、人数/次数/分母、反证及决定/需求映射。
+
 交接报告职责范围、产物路径、证据、限制、未决事项和下一步。任务状态不等于验证通过。成员不递归创建团队；仅唯一主理人按工作流委派。共享工作区时只修改获分配文件，保留他人改动。
 """

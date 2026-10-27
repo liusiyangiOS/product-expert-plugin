@@ -15,7 +15,7 @@ ROLES = {"product-team-lead", "product-strategist", "product-researcher", "produ
          "product-ux-designer", "product-ui-designer", "product-tech-analyst", "product-reviewer"}
 SKILLS = {"product-expert-team", "product-discovery", "product-project-audit",
           "product-design", "product-dev-bridge", "product-validation", "product-shared"}
-VERSION = "1.1.0"
+VERSION = "1.2.0"
 PACKAGE_NAME = "product-expert-codex"
 
 
@@ -114,7 +114,8 @@ def payload():
                      "product-design-platforms.md", "product-research.md", "product_bridge.py",
                      "product-methods.md", "product-graph.md", "product_graph.py",
                      "templates/product-graph.json", "templates/product-experiment.md",
-                     "templates/product-decision.md"):
+                     "templates/product-decision.md", "product-feedback.md", "product-ui-review.md",
+                     "templates/product-feedback.md", "templates/product-ui-review.md"):
         if f".agents/skills/product-shared/{required}" not in files:
             raise ValueError(f"安装包缺少共享资源：{required}")
     return files
