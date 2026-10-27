@@ -1,0 +1,4 @@
+interface:
+  display_name: "产品开发双向协作"
+  short_description: "把产品需求直接交给可用开发专家团，或接收开发的产品澄清、设计及验收请求，保留版本与回执。"
+  default_prompt: "使用 $product-dev-bridge，结合当前目标和已有材料推进，并明确证据与下一步。"

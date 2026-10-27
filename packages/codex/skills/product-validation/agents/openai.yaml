@@ -1,0 +1,4 @@
+interface:
+  display_name: "产品验证与验收"
+  short_description: "独立检查产品假设、需求、设计或实际实现，制定验证并区分交付质量与真实用户效果。"
+  default_prompt: "使用 $product-validation，结合当前目标和已有材料推进，并明确证据与下一步。"

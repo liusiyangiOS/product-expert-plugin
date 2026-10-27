@@ -1,0 +1,46 @@
+[
+  {
+    "host": "codex",
+    "validator": "/Users/liusiyang/Documents/GitHubOfMine/product-expert-plugin/packages/codex/skills/product-shared/product_bridge.py",
+    "validator_sha256": "b497cc11b841d9e08614c9c5516889ad10591bd33e57137206150322e07235bd",
+    "case": "04-clarify-blocking-ready",
+    "expected_exit": 0,
+    "exit_code": 0,
+    "matches_expected": true,
+    "stdout": "{\n  \"request_id\": \"delete-records-clarify-01\",\n  \"revision\": 1,\n  \"status\": \"ready\",\n  \"valid\": true,\n  \"note\": \"仅结构与就绪条件通过；授权、引用、派发及验收证据仍需接收方核实\"\n}",
+    "stderr": ""
+  },
+  {
+    "host": "codex",
+    "validator": "/Users/liusiyang/Documents/GitHubOfMine/product-expert-plugin/packages/codex/skills/product-shared/product_bridge.py",
+    "validator_sha256": "b497cc11b841d9e08614c9c5516889ad10591bd33e57137206150322e07235bd",
+    "case": "08-implement-blocking-ready",
+    "expected_exit": 1,
+    "exit_code": 1,
+    "matches_expected": true,
+    "stdout": "",
+    "stderr": "未通过：存在阻断实现的未决项"
+  },
+  {
+    "host": "claude",
+    "validator": "/Users/liusiyang/Documents/GitHubOfMine/product-expert-plugin/packages/claude/skills/product-shared/product_bridge.py",
+    "validator_sha256": "b497cc11b841d9e08614c9c5516889ad10591bd33e57137206150322e07235bd",
+    "case": "04-clarify-blocking-ready",
+    "expected_exit": 0,
+    "exit_code": 0,
+    "matches_expected": true,
+    "stdout": "{\n  \"request_id\": \"delete-records-clarify-01\",\n  \"revision\": 1,\n  \"status\": \"ready\",\n  \"valid\": true,\n  \"note\": \"仅结构与就绪条件通过；授权、引用、派发及验收证据仍需接收方核实\"\n}",
+    "stderr": ""
+  },
+  {
+    "host": "claude",
+    "validator": "/Users/liusiyang/Documents/GitHubOfMine/product-expert-plugin/packages/claude/skills/product-shared/product_bridge.py",
+    "validator_sha256": "b497cc11b841d9e08614c9c5516889ad10591bd33e57137206150322e07235bd",
+    "case": "08-implement-blocking-ready",
+    "expected_exit": 1,
+    "exit_code": 1,
+    "matches_expected": true,
+    "stdout": "",
+    "stderr": "未通过：存在阻断实现的未决项"
+  }
+]

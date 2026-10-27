@@ -1,0 +1,4 @@
+interface:
+  display_name: "已有产品分析"
+  short_description: "读取已有项目代码、文档和可用运行证据，建立产品能力地图并提出可追溯的需求或优化建议。"
+  default_prompt: "使用 $product-project-audit，结合当前目标和已有材料推进，并明确证据与下一步。"

@@ -1,0 +1,44 @@
+[
+  {
+    "case": "01-implement-ready",
+    "exit_code": 0,
+    "stdout": "{\n  \"request_id\": \"delete-records\",\n  \"revision\": 1,\n  \"status\": \"ready\",\n  \"valid\": true,\n  \"note\": \"仅结构与就绪条件通过；授权、引用、派发及验收证据仍需接收方核实\"\n}",
+    "stderr": ""
+  },
+  {
+    "case": "02-implement-in-progress",
+    "exit_code": 0,
+    "stdout": "{\n  \"request_id\": \"delete-records\",\n  \"revision\": 1,\n  \"status\": \"in_progress\",\n  \"valid\": true,\n  \"note\": \"仅结构与就绪条件通过；授权、引用、派发及验收证据仍需接收方核实\"\n}",
+    "stderr": ""
+  },
+  {
+    "case": "03-parent-blocked",
+    "exit_code": 0,
+    "stdout": "{\n  \"request_id\": \"delete-records\",\n  \"revision\": 1,\n  \"status\": \"blocked\",\n  \"valid\": true,\n  \"note\": \"仅结构与就绪条件通过；授权、引用、派发及验收证据仍需接收方核实\"\n}",
+    "stderr": ""
+  },
+  {
+    "case": "04-clarify-blocking-ready",
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "未通过：存在阻断未决项"
+  },
+  {
+    "case": "05-clarify-mislabeled-nonblocking",
+    "exit_code": 0,
+    "stdout": "{\n  \"request_id\": \"delete-records-clarify-01\",\n  \"revision\": 1,\n  \"status\": \"ready\",\n  \"valid\": true,\n  \"note\": \"仅结构与就绪条件通过；授权、引用、派发及验收证据仍需接收方核实\"\n}",
+    "stderr": ""
+  },
+  {
+    "case": "06-clarify-returned",
+    "exit_code": 0,
+    "stdout": "{\n  \"request_id\": \"delete-records-clarify-01\",\n  \"revision\": 1,\n  \"status\": \"returned\",\n  \"valid\": true,\n  \"note\": \"仅结构与就绪条件通过；授权、引用、派发及验收证据仍需接收方核实\"\n}",
+    "stderr": ""
+  },
+  {
+    "case": "07-resume-existing-dev-task",
+    "exit_code": 0,
+    "stdout": "{\n  \"request_id\": \"delete-records\",\n  \"revision\": 2,\n  \"status\": \"in_progress\",\n  \"valid\": true,\n  \"note\": \"仅结构与就绪条件通过；授权、引用、派发及验收证据仍需接收方核实\"\n}",
+    "stderr": ""
+  }
+]

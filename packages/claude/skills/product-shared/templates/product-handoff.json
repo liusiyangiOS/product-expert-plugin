@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "request_id": "product-example-001",
+  "revision": 1,
+  "parent_request_id": null,
+  "direction": "product-to-dev",
+  "intent": "implement",
+  "status": "draft",
+  "coordinator": "current-session",
+  "return_to": "current-session/product-acceptance",
+  "target": {
+    "repo": "",
+    "branch": "",
+    "baseline": "",
+    "snapshot": ""
+  },
+  "authorization": {
+    "scope": "read-only",
+    "evidence": ""
+  },
+  "artifacts": [],
+  "acceptance": [],
+  "open_questions": [],
+  "dispatch": null,
+  "result": null
+}

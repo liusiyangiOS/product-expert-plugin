@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "request_id": "delete-records",
+  "revision": 1,
+  "parent_request_id": null,
+  "direction": "product-to-dev",
+  "intent": "implement",
+  "status": "ready",
+  "coordinator": "simulated-current-session",
+  "return_to": "simulated-current-session/product-acceptance",
+  "target": {
+    "repo": "/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/product-forward-test-9bq39bmd",
+    "branch": "feature/1027/delete-records",
+    "baseline": "simulated-main-sha",
+    "snapshot": "synthetic-fixture-v1"
+  },
+  "authorization": {
+    "scope": "implement",
+    "evidence": "模拟用户请求：用户已授权实现需求。此字段不是真实执行授权。"
+  },
+  "artifacts": [
+    {
+      "kind": "requirement",
+      "ref": "/var/folders/2r/3t3s5pkj769fkwqc1_d3qgf0b0g8g4/T/product-forward-test-9bq39bmd/requirement-v1.md",
+      "version": "sha256:4cda81de358574cedc489545c3eb4c4d6b45fb93a717134b8565da6be38d80c3"
+    }
+  ],
+  "acceptance": [
+    {
+      "id": "AC-DELETE",
+      "criterion": "用户删除本人记录后，当前列表不再展示该记录"
+    }
+  ],
+  "open_questions": [
+    {
+      "question": "删除后允许恢复吗？若允许，恢复期限及永久删除规则是什么？",
+      "blocking": true
+    }
+  ],
+  "dispatch": null,
+  "result": null
+}

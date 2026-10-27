@@ -1,0 +1,17 @@
+{
+  "name": "product-expert",
+  "owner": {
+    "name": "liusiyang"
+  },
+  "plugins": [
+    {
+      "name": "product-expert-plugin",
+      "source": "./packages/claude",
+      "description": "产品专家团：8 个专家、6 个工作流，覆盖主动构思、调研、需求、UX/UI、老项目分析及双向开发协作。"
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0"
+  },
+  "description": "产品专家团 Claude 市场入口；同仓库另提供独立 Codex 安装包。"
+}

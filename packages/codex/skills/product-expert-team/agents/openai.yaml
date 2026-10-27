@@ -1,0 +1,4 @@
+interface:
+  display_name: "产品专家团"
+  short_description: "从想法或已有产品组织机会探索、调研、需求、UX/UI、验证与开发协作；适合跨阶段产品工作。"
+  default_prompt: "使用 $product-expert-team，结合当前目标和已有材料推进，并明确证据与下一步。"
